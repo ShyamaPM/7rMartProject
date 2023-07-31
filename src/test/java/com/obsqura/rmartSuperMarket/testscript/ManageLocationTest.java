@@ -5,12 +5,13 @@ import org.testng.annotations.Test;
 import com.obsqura.rmartSuperMarket.pages.LoginPage;
 import com.obsqura.rmartSuperMarket.pages.ManageLocationPage;
 import com.obsqura.rmartSuperMarket.pages.MenuSelectionPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 
 public class ManageLocationTest extends Base
 {
-	@Test
-	public void verifyWhetherUserAbletoSubmitTheManageProduct()
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user able to submit the Manage Location page after adding all the field values")
+	public void verifyWhetherUserAbletoSubmitTheManageLocationAfterAddingAllTheValues()
 	{
 		String userName = ExcelUtility.getString(1, 0,"LoginPage");
 		String password = ExcelUtility.getString(1, 0,"LoginPage");

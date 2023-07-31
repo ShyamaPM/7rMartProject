@@ -26,24 +26,28 @@ public class ManageSliderPage
 	@FindBy(xpath = "//div[contains(@class,'alert-dismissible')]") private WebElement alertMessage;
 	
 	
-	public void newButtonClick()
+	public ManageSliderPage newButtonClick()
 	{
 		newButton.click();
+		return this;
 	}
-	public void uploadFileByCLickingOnFileUplaodButton()
+	public ManageSliderPage uploadFileByCLickingOnFileUplaodButton()
 	{
 		UploadFileUtility uploadFileUtility = new UploadFileUtility();
 		uploadFileUtility.fileUploadUsingSendKeys(fileUploadButton, GeneralUtility.IMAGEFILEFORMANAGECATEGORYCATEGORYPAGE);
+		return this;
 	}
-	public void enterTextDataInLinkTextField()
+	public ManageSliderPage enterTextDataInLinkTextField()
 	{
 		linkTextField.sendKeys(ExcelUtility.getString(0, 0, "ManageSlider"));
+		return this;
 	}
-	public void clickOnSaveButton()
+	public ManageSliderPage clickOnSaveButton()
 	{
 		WaitUtility waitUtility = new WaitUtility();
 		waitUtility.waitForElementClickable(driver,saveButton);
 		saveButton.click();
+		return this;
 	}
 	public boolean successalertMessageDisplay() 
 	{

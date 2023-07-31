@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 import com.obsqura.rmartSuperMarket.pages.ExpenseCategoryPage;
 import com.obsqura.rmartSuperMarket.pages.LoginPage;
 import com.obsqura.rmartSuperMarket.pages.MenuSelectionPage;
-
+import retry.Retry;
 import utilities.ExcelUtility;
 
 public class ExpenseCategoryTest extends Base
 {
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user able to to delete the mentioned title")
 	public void verifyWhetherUserAbleToDeleteTheTitle()
 	{
 		String userName = ExcelUtility.getString(1, 0,"LoginPage");
@@ -19,8 +19,7 @@ public class ExpenseCategoryTest extends Base
 		loginPage.enterUsernameOnUsernameField(userName).enterPasswrodOnPasswrodField(password).clickOnSignInButton();
 		
 		MenuSelectionPage menuSelectionPage = new MenuSelectionPage(driver);
-		menuSelectionPage.clickOnManageExpense();
-		menuSelectionPage.clickOnExpenseCategorySubMenu();
+		menuSelectionPage.clickOnManageExpense().clickOnExpenseCategorySubMenu();
 		
 		ExpenseCategoryPage expenseCategoryPage = new ExpenseCategoryPage(driver);
 		expenseCategoryPage.deletTheTitle();
@@ -28,7 +27,7 @@ public class ExpenseCategoryTest extends Base
 		assertTrue(isAlertMessageDisplayed, "Unable to delete");
 	}
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user is able to edit the Title")
 	public void verifyUserAbleToEditTheTile()
 	{
 		String userName = ExcelUtility.getString(1, 0,"LoginPage");
@@ -37,8 +36,7 @@ public class ExpenseCategoryTest extends Base
 		loginPage.enterUsernameOnUsernameField(userName).enterPasswrodOnPasswrodField(password).clickOnSignInButton();
 		
 		MenuSelectionPage menuSelectionPage = new MenuSelectionPage(driver);
-		menuSelectionPage.clickOnManageExpense();
-		menuSelectionPage.clickOnExpenseCategorySubMenu();
+		menuSelectionPage.clickOnManageExpense().clickOnExpenseCategorySubMenu();
 		
 		ExpenseCategoryPage expenseCategoryPage = new ExpenseCategoryPage(driver);
 		expenseCategoryPage.editTheTitle();

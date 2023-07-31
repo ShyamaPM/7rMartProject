@@ -1,18 +1,16 @@
 package com.obsqura.rmartSuperMarket.testscript;
 
 import static org.testng.Assert.assertTrue;
-
 import org.testng.annotations.Test;
-
 import com.obsqura.rmartSuperMarket.pages.LoginPage;
 import com.obsqura.rmartSuperMarket.pages.MenuSelectionPage;
 import com.obsqura.rmartSuperMarket.pages.PushNotificationPage;
-
+import retry.Retry;
 import utilities.ExcelUtility;
 
 public class PushNotificationTest extends Base
 {
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user able to send notification via Push Notification")
 	public void verifyWhetherUserAbleToSendTheNotification()
 	{
 		String userName = ExcelUtility.getString(1, 0,"LoginPage");

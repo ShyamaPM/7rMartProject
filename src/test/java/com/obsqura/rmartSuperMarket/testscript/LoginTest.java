@@ -21,42 +21,36 @@ public class LoginTest extends Base
 		assertTrue(isNavigatedToHomePage,"Not navigated to homepage");
 	}
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user should not be able to login using valid username and invalid password")
 	@Parameters("password")
 	public void verifyTheUserCannotLoginWithValidUserNameandInvalidPassword(String password)
 	{
 		String username = ExcelUtility.getString(1, 0,"LoginPage");
 		//String password = ExcelUtility.getString(2, 0,"LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUsernameOnUsernameField(username);
-		loginPage.enterPasswrodOnPasswrodField(password);
-		loginPage.clickOnSignInButton();
+		loginPage.enterUsernameOnUsernameField(username).enterPasswrodOnPasswrodField(password).clickOnSignInButton();
 		boolean isAlertMessageDisplayed = loginPage.isAlertMessageDisplayedAfterEnteringInvalidCredentials();
 		assertTrue(isAlertMessageDisplayed, "User able to navigate to homepage");
 	}
 
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user shoul not be able to login using invalid username and valid password")
 	public void verifyTheUserCannotLoginWithInvalidUserNameandValidPassword()
 	{
 		String userName = ExcelUtility.getString(2, 0,"LoginPage");
 		String password = ExcelUtility.getString(1, 0,"LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUsernameOnUsernameField(userName);
-		loginPage.enterPasswrodOnPasswrodField(password);
-		loginPage.clickOnSignInButton();
+		loginPage.enterUsernameOnUsernameField(userName).enterPasswrodOnPasswrodField(password).clickOnSignInButton();
 		boolean isAlertMessageDisplayed = loginPage.isAlertMessageDisplayedAfterEnteringInvalidCredentials();
 		assertTrue(isAlertMessageDisplayed, "User able to navigate to homepage");
 	}
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user should not be able to login using invalid credentials")
 	public void verifyTheUserCannotLoginWithInvalidUserNameandInvalidPassword()
 	{
 		String userName = "Tester";
 		String password = "test";
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUsernameOnUsernameField(userName);
-		loginPage.enterPasswrodOnPasswrodField(password);
-		loginPage.clickOnSignInButton();
+		loginPage.enterUsernameOnUsernameField(userName).enterPasswrodOnPasswrodField(password).clickOnSignInButton();
 		boolean isAlertMessageDisplayed = loginPage.isAlertMessageDisplayedAfterEnteringInvalidCredentials();
 		assertTrue(isAlertMessageDisplayed, "User able to navigate to homepage");
 	}

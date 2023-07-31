@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 import com.obsqura.rmartSuperMarket.pages.LoginPage;
 import com.obsqura.rmartSuperMarket.pages.MenuSelectionPage;
 import com.obsqura.rmartSuperMarket.pages.VerifyUsersPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 
 public class VerifyUsersTest extends Base
 {
-
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify whether search user exists in the Verify User list")
 	public void verifyTheUserExistsInTheVerifyUsersList()
 	{
 		String name = ExcelUtility.getString(0, 0,"VerifyUserPage");
@@ -21,10 +21,9 @@ public class VerifyUsersTest extends Base
 		
 		MenuSelectionPage menuSelectionPage = new MenuSelectionPage(driver);
 		menuSelectionPage.clickOnVerifyUsers();
+		
 		VerifyUsersPage verifyUsersPage = new VerifyUsersPage(driver);
-		verifyUsersPage.clickOnSearchBox();
-		verifyUsersPage.enterNameinSearchField(name);
-		verifyUsersPage.clickOnSearchButton();
+		verifyUsersPage.clickOnSearchBox().enterNameinSearchField(name).clickOnSearchButton();
 		String actualResult = verifyUsersPage.isTheSearcNameExistsInTheVerifyUsersList();
 		assertEquals(name, actualResult,"The entered name is not exists in the actual result");	
 	}

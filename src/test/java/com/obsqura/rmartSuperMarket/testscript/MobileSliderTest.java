@@ -5,12 +5,13 @@ import org.testng.annotations.Test;
 import com.obsqura.rmartSuperMarket.pages.LoginPage;
 import com.obsqura.rmartSuperMarket.pages.MenuSelectionPage;
 import com.obsqura.rmartSuperMarket.pages.MobileSliderPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 
 public class MobileSliderTest extends Base
 {
-	@Test
-	public void checkWhetherTheUserAbletoSelectValueFromDropDown() throws InterruptedException
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user able to submit the Mobile slider page after filling all the values")
+	public void checkWhetherTheUserAbletoSelectValueFromDropDownandUploadFile() throws InterruptedException
 	{
 		String userName = ExcelUtility.getString(1, 0,"LoginPage");
 		String password = ExcelUtility.getString(1, 0,"LoginPage");
@@ -19,18 +20,10 @@ public class MobileSliderTest extends Base
 		
 		MenuSelectionPage menuSelectionPage = new MenuSelectionPage(driver);
 		menuSelectionPage.clickOnMobileSlider();
-		//menuSelectionPage.toGetAllTheSubMenus("Mobile Slider");
 		
 		MobileSliderPage mobileSliderPage = new MobileSliderPage(driver);
-		mobileSliderPage.clickOnNewButton();
-		mobileSliderPage.clickOnTheCategoryDropDownBox();
-		mobileSliderPage.selectValueFromCategoryDropDown();
-		mobileSliderPage.uploadFileByClickingOnChooseFileButton();
-		mobileSliderPage.clickOnSaveButton();
-			
+		mobileSliderPage.clickOnNewButton().clickOnTheCategoryDropDownBox().selectValueFromCategoryDropDown().uploadFileByClickingOnChooseFileButton().clickOnSaveButton();
 		boolean isSuccessMessageDisplayed = mobileSliderPage.isSuccessAlertMessageDisplayed();
 		assertTrue(isSuccessMessageDisplayed, "Not successfully saved");
-		
 	}
-
 }

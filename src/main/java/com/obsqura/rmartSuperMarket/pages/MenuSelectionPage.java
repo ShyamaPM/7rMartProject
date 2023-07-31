@@ -54,90 +54,111 @@ public class MenuSelectionPage
 			}
 		}
 	}
-	public void clickOnDashBoard()
+	public MenuSelectionPage clickOnDashBoard()
 	{
 		dashBoard.click();
+		return this;
 	}
-	public void clickOnManageOrders()
+	public MenuSelectionPage clickOnManageOrders()
 	{
 		manageOrders.click();
+		return this;
 	}
-	public void clickOnGroceries()
+	public MenuSelectionPage clickOnGroceries()
 	{
 		groceries.click();
+		return this;
 	}
-	public void clickOnManageExpense()
+	public MenuSelectionPage clickOnManageExpense()
 	{
 		manageExpense.click();
+		return this;
 	}
-	public void clickOnExpenseCategorySubMenu()
+	public MenuSelectionPage clickOnExpenseCategorySubMenu()
 	{
 		expenseCategorySubMenu.click();
+		return this;
 	}
-	public void clickOnSubMenuManageExpense()
+	public MenuSelectionPage clickOnSubMenuManageExpense()
 	{
 		manageExpenseSubMenu.click();
+		return this;
 	}
-	public void clickOnManageProduct()
+	public MenuSelectionPage clickOnManageProduct()
 	{
 		manageProduct.click();
+		return this;
 	}
-	public void clickOnVerifyUsers()
+	public MenuSelectionPage clickOnVerifyUsers()
 	{
 		verifyUsers.click();
+		return this;
 	}
-	public void clickOnManageUsers()
+	public MenuSelectionPage clickOnManageUsers()
 	{
 		manageUsers.click();
+		return this;
 	}
-	public void clickOnPushNotification()
+	public MenuSelectionPage clickOnPushNotification()
 	{
 		pushNotification.click();
+		return this;
 	}
-	public void clickOnManageContent()
+	public MenuSelectionPage clickOnManageContent()
 	{
 		manageContent.click();
+		return this;
 	}
-	public void clickOnManageLocation()
+	public MenuSelectionPage clickOnManageLocation()
 	{
 		manageLocation.click();
+		return this;
 	}
-	public void clickOnManageSlider()
+	public MenuSelectionPage clickOnManageSlider()
 	{
 		manageSlider.click();
+		return this;
 	}
-	public void clickOnMobileSlider()
+	public MenuSelectionPage clickOnMobileSlider()
 	{
 		mobileSlider.click();
+		return this;
 	}
-	public void clickOnManageCategory()
+	public MenuSelectionPage clickOnManageCategory()
 	{
 		manageCategory.click();
+		return this;
 	}
-	public void clickOnCategorySubMenuOfManageCategory()
+	public MenuSelectionPage clickOnCategorySubMenuOfManageCategory()
 	{
 		JavascriptExecutor j = (JavascriptExecutor)driver; j.executeScript("scroll(0,500)");
 		categorySubMenu.click();
+		return this;
 	}
-	public void clickOnManageOfferCode() 
+	public MenuSelectionPage clickOnManageOfferCode() 
 	{
 		manageOfferCode.click();
+		return this;
 	}
-	public void clickOnManageDeliveryBoy()
+	public MenuSelectionPage clickOnManageDeliveryBoy()
 	{
 		manageDeliveryBoy.click();
+		return this;
 	}
-	public void clickOnManagePaymentMethod()
+	public MenuSelectionPage clickOnManagePaymentMethod()
 	{
 		managePaymentMethod.click();
+		return this;
 	}
-	public void clickOnAdminUsers() 
+	public MenuSelectionPage clickOnAdminUsers() 
 	{
 		adminUsers.click();
+		return this;
 	}
-	public void clickOnSettings()
+	public MenuSelectionPage clickOnSettings()
 	{
 		settings.click();
+		return this;
 	}
 
 }

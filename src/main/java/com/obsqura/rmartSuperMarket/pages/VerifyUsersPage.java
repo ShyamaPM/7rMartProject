@@ -25,22 +25,25 @@ public class VerifyUsersPage
 	@FindAll(@FindBy(xpath = "//table[contains(@class,'table-bordered')]//td")) private List<WebElement> tableData;
 	
 	
-	public void clickOnSearchBox()
+	public VerifyUsersPage clickOnSearchBox()
 	{
 		searchBox.click();
+		return this;
 	}
 
-	public void enterNameinSearchField(String name)
+	public VerifyUsersPage enterNameinSearchField(String name)
 	{
 		nameTextField.sendKeys(name);
+		return this;
 	}
 	
-	public void clickOnSearchButton()
+	public VerifyUsersPage clickOnSearchButton()
 	{
 		searchButton.click();
+		return this;
 	}
 	
-	public void isTheSearcNameExistsInTheVerifyUsersList(String name, boolean flag) 
+	public VerifyUsersPage isTheSearcNameExistsInTheVerifyUsersList(String name, boolean flag) 
 	{
 		List<String> nameList = new ArrayList<>();
 		for(WebElement rowValue:tableData)
@@ -53,6 +56,7 @@ public class VerifyUsersPage
 			    break;
 			}
 		}
+		return this;
 	}
 	
 	public String isTheSearcNameExistsInTheVerifyUsersList() 

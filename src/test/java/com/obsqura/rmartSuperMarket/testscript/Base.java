@@ -59,12 +59,13 @@ public class Base {
 	}
 	
 	@AfterMethod(alwaysRun = true)
-	public void browserQuit(ITestResult iTestResult) throws IOException {
-		if (iTestResult.getStatus() == ITestResult.FAILURE) {
+	public void browserQuit(ITestResult iTestResult) throws IOException 
+	{
+		if (iTestResult.getStatus() == ITestResult.FAILURE)
+		{
 			scrshot = new ScreenShotUtility();
 			scrshot.getScreenShot(driver, iTestResult.getName());
 		}
-
 		driver.quit();
 	}
 

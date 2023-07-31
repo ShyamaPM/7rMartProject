@@ -27,31 +27,36 @@ public class MobileSliderPage
 		@FindBy (xpath = "//i[@class='icon fas fa-check']") private WebElement alertMessage;
 		
 		
-		public void clickOnNewButton()
+		public MobileSliderPage clickOnNewButton()
 		{
 			newButton.click();
+			return this;
 		}
-		public void clickOnTheCategoryDropDownBox()
+		public MobileSliderPage clickOnTheCategoryDropDownBox()
 		{
 			categoryDropDown.click();
+			return this;
 		}
-		public void clickOnSaveButton()
+		public MobileSliderPage clickOnSaveButton()
 		{
 			WaitUtility waitUtility = new WaitUtility();
 			waitUtility.waitForElementClickable(driver,saveButton);
 			saveButton.click();
+			return this;
 		}
 		
-		public void selectValueFromCategoryDropDown()
+		public MobileSliderPage selectValueFromCategoryDropDown()
 		{
 			PageUtility pageUtility = new PageUtility();
 			pageUtility.selectDropdownbyText(categoryDropDown,ExcelUtility.getString(0, 0,"MobileSlider"));
+			return this;
 		}
 		
-		public void uploadFileByClickingOnChooseFileButton()
+		public MobileSliderPage uploadFileByClickingOnChooseFileButton()
 		{
 			UploadFileUtility uploadFileUtility = new UploadFileUtility();
 			uploadFileUtility.fileUploadUsingSendKeys(chooseFileButton,GeneralUtility.IMAGEFILEFORMANAGECATEGORYCATEGORYPAGE);
+			return this;
 		}
 		
 		public boolean isSuccessAlertMessageDisplayed()

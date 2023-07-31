@@ -5,12 +5,13 @@ import org.testng.annotations.Test;
 import com.obsqura.rmartSuperMarket.pages.LoginPage;
 import com.obsqura.rmartSuperMarket.pages.ManageExpensePage;
 import com.obsqura.rmartSuperMarket.pages.MenuSelectionPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 
 public class ManageExpenseTest extends Base
 {
-	@Test
-	public void verifyWhetherUserAbletoSubmitTheManageExpence()
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user able to submit the Manage Expense agter filling all the vaulues in the correspo ding field")
+	public void verifyWhetherUserAbletoSubmitTheManageExpenceAfterFillingAllFieldData()
 	{
 		String userName = ExcelUtility.getString(1, 0,"LoginPage");
 		String password = ExcelUtility.getString(1, 0,"LoginPage");
@@ -18,14 +19,13 @@ public class ManageExpenseTest extends Base
 		loginPage.enterUsernameOnUsernameField(userName).enterPasswrodOnPasswrodField(password).clickOnSignInButton();
 		
 		MenuSelectionPage menuSelectionPage = new MenuSelectionPage(driver);
-		menuSelectionPage.clickOnManageExpense();
-		menuSelectionPage.clickOnSubMenuManageExpense();
+		menuSelectionPage.clickOnManageExpense().clickOnSubMenuManageExpense();
 		
 		ManageExpensePage manageExpensePage = new ManageExpensePage(driver);
 		manageExpensePage.clickOnNewButton().selectUserDropDown().selectCategory().selectOrderId().selectPurchaseId()
 		   .selectExpenseType().enterAmount().enterRemarksData().uploadFile().clickOnSaveButton();
 		boolean isAlertMessageDisplayed = manageExpensePage.alertMessageIsDisplayed();
-		assertTrue(isAlertMessageDisplayed, "Submission failed");
+		assertTrue(isAlertMessageDisplayed, "Manage suer pages submission failed");
 	}
 
 }
