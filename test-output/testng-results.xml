@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-30T08:59:58 IST" name="TestNG" finished-at="2023-07-30T09:00:15 IST" duration-ms="16527">
+  <suite started-at="2023-07-31T08:13:11 IST" name="TestNG" finished-at="2023-07-31T08:13:30 IST" duration-ms="19159">
     <groups>
     </groups>
-    <test started-at="2023-07-30T08:59:58 IST" name="Test" finished-at="2023-07-30T09:00:15 IST" duration-ms="16527">
-      <class name="com.obsqura.rmartSuperMarket.testscript.ExpenseCategoryTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.ExpenseCategoryTest@3549bca9]" started-at="2023-07-30T08:59:58 IST" name="initializeBrowser" finished-at="2023-07-30T09:00:10 IST" duration-ms="11513" status="PASS">
+    <test started-at="2023-07-31T08:13:11 IST" name="Test" finished-at="2023-07-31T08:13:30 IST" duration-ms="19159">
+      <class name="com.obsqura.rmartSuperMarket.testscript.PushNotificationTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@3549bca9]" started-at="2023-07-31T08:13:11 IST" name="initializeBrowser" finished-at="2023-07-31T08:13:27 IST" duration-ms="15889" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,58 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyUserAbleToEditTheTile()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.ExpenseCategoryTest@3549bca9]" started-at="2023-07-30T09:00:10 IST" name="verifyUserAbleToEditTheTile" finished-at="2023-07-30T09:00:14 IST" duration-ms="4290" status="PASS">
+        <test-method signature="verifyWhetherUserAbleToSendTheNotification()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@3549bca9]" started-at="2023-07-31T08:13:27 IST" name="verifyWhetherUserAbleToSendTheNotification" finished-at="2023-07-31T08:13:28 IST" duration-ms="1896" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at utilities.ExcelUtility.getString(ExcelUtility.java:129)
+at com.obsqura.rmartSuperMarket.testscript.PushNotificationTest.verifyWhetherUserAbleToSendTheNotification(PushNotificationTest.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserAbleToEditTheTile -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.ExpenseCategoryTest@3549bca9]" started-at="2023-07-30T09:00:14 IST" name="browserQuit" finished-at="2023-07-30T09:00:15 IST" duration-ms="648" status="PASS">
+        </test-method> <!-- verifyWhetherUserAbleToSendTheNotification -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@3549bca9]" started-at="2023-07-31T08:13:29 IST" name="browserQuit" finished-at="2023-07-31T08:13:30 IST" duration-ms="1203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherUserAbleToSendTheNotification status=FAILURE method=PushNotificationTest.verifyWhetherUserAbleToSendTheNotification()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@3549bca9] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- com.obsqura.rmartSuperMarket.testscript.ExpenseCategoryTest -->
+      </class> <!-- com.obsqura.rmartSuperMarket.testscript.PushNotificationTest -->
     </test> <!-- Test -->
   </suite> <!-- TestNG -->
 </testng-results>

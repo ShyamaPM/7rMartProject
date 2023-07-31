@@ -9,13 +9,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsqura.rmartSuperMarket.testscript.ExpenseCategoryTest">
+      <class name="com.obsqura.rmartSuperMarket.testscript.PushNotificationTest">
         <methods>
+          <include name="verifyWhetherUserAbleToSendTheNotification"/>
           <include name="browserQuit"/>
-          <include name="verifyUserAbleToEditTheTile"/>
           <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- com.obsqura.rmartSuperMarket.testscript.ExpenseCategoryTest -->
+      </class> <!-- com.obsqura.rmartSuperMarket.testscript.PushNotificationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [TestNG] -->
