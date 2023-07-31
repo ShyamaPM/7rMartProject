@@ -48,12 +48,16 @@ public class ManageCategoryPage
 	{
 		UploadFileUtility uploadFileUtility = new UploadFileUtility();
 		uploadFileUtility.fileUploadUsingSendKeys(chooseFileButton,GeneralUtility.IMAGEFILEFORMANAGECATEGORYCATEGORYPAGE);
+		PageUtility pageUtility = new PageUtility();
+		pageUtility.scrollBy(driver);
 		return this;
 	}
 	public ManageCategoryPage clickOnNoRadioButtonOfShowOnTopMenuField() 
 	{
 		PageUtility pageUtility = new PageUtility();
 		pageUtility.scrollBy(driver);
+		WaitUtility waitUtility = new WaitUtility();
+		waitUtility.waitForElementClickable(driver,showOnTopMenuNoRadioButton);
 		showOnTopMenuNoRadioButton.click();
 		return this;
 	}

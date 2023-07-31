@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.ExcelUtility;
+import utilities.WaitUtility;
 
 public class PushNotificationPage 
 {
@@ -34,6 +35,8 @@ public class PushNotificationPage
 	}
 	public PushNotificationPage clickOnSaveButton()
 	{
+		WaitUtility waitUtility = new WaitUtility();
+		waitUtility.waitForElementClickable(driver,sendButton);
 		sendButton.click();
 		return this;
 	}

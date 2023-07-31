@@ -47,8 +47,8 @@ public class LoginTest extends Base
 	@Test(retryAnalyzer = Retry.class,description="Verify whether user should not be able to login using invalid credentials")
 	public void verifyTheUserCannotLoginWithInvalidUserNameandInvalidPassword()
 	{
-		String userName = "Tester";
-		String password = "test";
+		String userName = ExcelUtility.getString(2, 0,"LoginPage");
+		String password = ExcelUtility.getString(2, 0,"LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUsernameOnUsernameField(userName).enterPasswrodOnPasswrodField(password).clickOnSignInButton();
 		boolean isAlertMessageDisplayed = loginPage.isAlertMessageDisplayedAfterEnteringInvalidCredentials();

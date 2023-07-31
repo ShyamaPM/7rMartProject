@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import utilities.PageUtility;
 
 public class ExpenseCategoryPage 
@@ -23,7 +22,7 @@ public class ExpenseCategoryPage
 	@FindAll(@FindBy (xpath = "//i[contains(@class,'fa-trash-alt')]")) private List<WebElement> deleteIcon;
 	@FindBy(xpath = "(//a[contains(@class,'btn-danger')])[2]") private WebElement delete;
 	@FindBy(xpath = "//div[contains(@class,'alert-dismissible')]") private WebElement alertMessage;
-	@FindBy(xpath = "(//a[contains(@class,'btn-primary')])[4]") private WebElement edit;
+	@FindBy(xpath = "(//a[contains(@href,'1661&page_ad=1') and contains(@class,'btn-primary')])") private WebElement edit;
 	@FindBy(xpath = "//input[@id='name']") private WebElement titleTextBox;
 	@FindBy(xpath = "//i[contains(@class,'fa-save')]") private WebElement updateButton;
 	
@@ -52,11 +51,11 @@ public class ExpenseCategoryPage
 		{
 			String getTitleText = title.getText();
 		
-			if(getTitleText.contains("testNEs"))
+			if(getTitleText.contains("New"))
 			{
 				edit.click();
 				titleTextBox.clear();
-				titleTextBox.sendKeys("Shyama");
+				titleTextBox.sendKeys("Reyan");
 				updateButton.click();
 				break;
 			}

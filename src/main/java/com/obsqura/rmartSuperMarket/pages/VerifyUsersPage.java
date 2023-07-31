@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.WaitUtility;
+
 public class VerifyUsersPage 
 {
 	public WebDriver driver;
@@ -39,6 +41,8 @@ public class VerifyUsersPage
 	
 	public VerifyUsersPage clickOnSearchButton()
 	{
+		WaitUtility waitUtility = new WaitUtility();
+		waitUtility.waitForElementClickable(driver,searchButton);
 		searchButton.click();
 		return this;
 	}

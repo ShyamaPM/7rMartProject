@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ExcelUtility;
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class ManageDeliveryBoyPage 
 {
@@ -54,6 +55,8 @@ public class ManageDeliveryBoyPage
 	}
 	public ManageDeliveryBoyPage clickOnSaveButton()
 	{
+		WaitUtility waitUtility = new WaitUtility();
+		waitUtility.waitForElementClickable(driver,saveButton);
 		saveButton.click();
 		return this;
 	}
