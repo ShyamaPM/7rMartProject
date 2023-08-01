@@ -26,7 +26,6 @@ public class LoginTest extends Base
 	public void verifyTheUserCannotLoginWithValidUserNameandInvalidPassword(String password)
 	{
 		String username = ExcelUtility.getString(1, 0,"LoginPage");
-		//String password = ExcelUtility.getString(2, 0,"LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUsernameOnUsernameField(username).enterPasswrodOnPasswrodField(password).clickOnSignInButton();
 		boolean isAlertMessageDisplayed = loginPage.isAlertMessageDisplayedAfterEnteringInvalidCredentials();
