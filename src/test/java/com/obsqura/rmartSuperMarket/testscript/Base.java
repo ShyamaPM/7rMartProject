@@ -34,17 +34,13 @@ public class Base {
 		catch (FileNotFoundException e) 
 		{
 			e.printStackTrace();
-		}
-		
+		}	
 		if (browser.equalsIgnoreCase("firefox")) {
 			driver = WebDriverManager.firefoxdriver().create();
-
 		}
 		else if (browser.equalsIgnoreCase("chrome")) {
 			driver = WebDriverManager.chromedriver().create();
-
 		}
-
 		else if (browser.equalsIgnoreCase("edge")) 
 		{
 			driver = WebDriverManager.edgedriver().create();

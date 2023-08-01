@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsqura.rmartSuperMarket.ManageSliderTest">
+      <class name="com.obsqura.rmartSuperMarket.testscript.ExpenseCategoryTest">
         <methods>
-          <include name="initializeBrowser"/>
+          <include name="verifyWhetherUserAbleToDeleteTheTitle"/>
           <include name="browserQuit"/>
-          <include name="verifyWhetherTheUserAbleToUploadFile"/>
+          <include name="verifyUserAbleToEditTheTile"/>
+          <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- com.obsqura.rmartSuperMarket.ManageSliderTest -->
+      </class> <!-- com.obsqura.rmartSuperMarket.testscript.ExpenseCategoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

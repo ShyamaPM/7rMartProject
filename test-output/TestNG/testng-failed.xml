@@ -9,13 +9,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsqura.rmartSuperMarket.testscript.PushNotificationTest">
+      <class name="com.obsqura.rmartSuperMarket.testscript.ManageCategoryTest">
         <methods>
-          <include name="verifyWhetherUserAbleToSendTheNotification"/>
           <include name="browserQuit"/>
+          <include name="verifyWhetherTheUserAbleToAddValuesInManageCategory"/>
           <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- com.obsqura.rmartSuperMarket.testscript.PushNotificationTest -->
+      </class> <!-- com.obsqura.rmartSuperMarket.testscript.ManageCategoryTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [TestNG] -->

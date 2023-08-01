@@ -10,7 +10,7 @@ import utilities.ExcelUtility;
 public class LoginTest extends Base
 {
 	
-	@Test(retryAnalyzer = Retry.class,description="Verify whether user is able to login using valid username and password")
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user is able to login using valid username and password",groups = {"regression"})
 	public void verifyTheUserAbleToLoginWithValidCredentials()
 	{
 		String userName = ExcelUtility.getString(1, 0,"LoginPage");
@@ -21,7 +21,7 @@ public class LoginTest extends Base
 		assertTrue(isNavigatedToHomePage,"Not navigated to homepage");
 	}
 	
-	@Test(retryAnalyzer = Retry.class,description="Verify whether user should not be able to login using valid username and invalid password")
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user should not be able to login using valid username and invalid password",groups = {"smoke"})
 	@Parameters("password")
 	public void verifyTheUserCannotLoginWithValidUserNameandInvalidPassword(String password)
 	{
@@ -33,7 +33,7 @@ public class LoginTest extends Base
 		assertTrue(isAlertMessageDisplayed, "User able to navigate to homepage");
 	}
 
-	@Test(retryAnalyzer = Retry.class,description="Verify whether user shoul not be able to login using invalid username and valid password")
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user shoul not be able to login using invalid username and valid password", groups = {"regression","smoke"})
 	public void verifyTheUserCannotLoginWithInvalidUserNameandValidPassword()
 	{
 		String userName = ExcelUtility.getString(2, 0,"LoginPage");

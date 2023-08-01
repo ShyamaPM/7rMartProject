@@ -10,7 +10,7 @@ import utilities.ExcelUtility;
 
 public class MobileSliderTest extends Base
 {
-	@Test(retryAnalyzer = Retry.class,description="Verify whether user able to submit the Mobile slider page after filling all the values")
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user able to submit the Mobile slider page after filling all the values",groups = {"regression"})
 	public void checkWhetherTheUserAbletoSelectValueFromDropDownandUploadFile() throws InterruptedException
 	{
 		String userName = ExcelUtility.getString(1, 0,"LoginPage");
