@@ -10,7 +10,7 @@ import utilities.ExcelUtility;
 
 public class VerifyUsersTest extends Base
 {
-	@Test(retryAnalyzer = Retry.class,description="Verify whether search user exists in the Verify User list")
+	@Test(retryAnalyzer = Retry.class,description="Verify whether search user exists in the Verify User list",priority=1)
 	public void verifyTheUserExistsInTheVerifyUsersList()
 	{
 		String name = ExcelUtility.getString(0, 0,"VerifyUserPage");
@@ -25,10 +25,10 @@ public class VerifyUsersTest extends Base
 		VerifyUsersPage verifyUsersPage = new VerifyUsersPage(driver);
 		verifyUsersPage.clickOnSearchBox().enterNameinSearchField(name).clickOnSearchButton();
 		String actualResult = verifyUsersPage.isTheSearcNameExistsInTheVerifyUsersList();
-		assertEquals(name, actualResult,"The entered name is not exists in the actual result");	
+		assertEquals(name, actualResult,"In Verify Users page, the entered name is not exists in the actual result");	
 	}
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class,description="Verify whether search user exists in the Verify User list", priority=2)
 	public void checkingSearchFunctioanlity() throws InterruptedException
 	{
 		String name = ExcelUtility.getString(0, 0,"VerifyUserPage");
@@ -41,10 +41,10 @@ public class VerifyUsersTest extends Base
 		menuSelectionPage.clickOnVerifyUsers();
 		
 		VerifyUsersPage verifyUsersPage = new VerifyUsersPage(driver);
-		verifyUsersPage.clickOnSearchBox();
-		verifyUsersPage.enterNameinSearchField(name);
-		verifyUsersPage.isTheSearcNameExistsInTheVerifyUsersList(name, false);
-		verifyUsersPage.clickOnSearchButton();
+		verifyUsersPage.clickOnSearchBox().enterNameinSearchField(name).clickOnSearchButton();
+		String actualResult = verifyUsersPage.isTheSearcNameExistsInTheVerifyUsersList();
+		assertEquals(name, actualResult,"In Verify Users page, the entered name is not exists in the actual result");	
+		
 	}
 
 }

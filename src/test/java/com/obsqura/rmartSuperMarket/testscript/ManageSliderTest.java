@@ -24,7 +24,7 @@ public class ManageSliderTest extends Base
 		ManageSliderPage manageSilderPage = new ManageSliderPage(driver).newButtonClick().uploadFileByCLickingOnFileUplaodButton().enterTextDataInLinkTextField()
 		      .clickOnSaveButton();
 		boolean isAlertMessageDisplayed = manageSilderPage.successalertMessageDisplay();
-		assertTrue(isAlertMessageDisplayed, "Some issue while adding the doc or link");	
+		assertTrue(isAlertMessageDisplayed, "Unable to submit the Manage Silder page");	
 	}
 
 }

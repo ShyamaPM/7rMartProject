@@ -25,7 +25,7 @@ public class ManageExpenseTest extends Base
 		manageExpensePage.clickOnNewButton().selectUserDropDown().selectCategory().selectOrderId().selectPurchaseId()
 		   .selectExpenseType().enterAmount().enterRemarksData().uploadFile().clickOnSaveButton();
 		boolean isAlertMessageDisplayed = manageExpensePage.alertMessageIsDisplayed();
-		assertTrue(isAlertMessageDisplayed, "Manage suer pages submission failed");
+		assertTrue(isAlertMessageDisplayed, "Unable to submit Manage Expense page");
 	}
 
 }

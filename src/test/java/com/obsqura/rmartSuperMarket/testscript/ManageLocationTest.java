@@ -25,7 +25,7 @@ public class ManageLocationTest extends Base
 		manageLocationPage.clickOnNewButton().selectContryFromDropDown().selectStateFromDropDown().enterLocation()
 		.enterDeliveryCharge().clickOnSaveButton();
 		boolean isAlertMessageDisplayed = manageLocationPage.successalertMessageDisplay();
-		assertTrue(isAlertMessageDisplayed, "Unable to submit Manage Location");
+		assertTrue(isAlertMessageDisplayed, "Unable to submit Manage Location page");
 			
 	}
 

@@ -24,7 +24,7 @@ public class PushNotificationTest extends Base
 		PushNotificationPage pushNotificationPage = new PushNotificationPage(driver);
 		pushNotificationPage.enterTitle().enterDescripiton().clickOnSaveButton();
 		boolean isAlertMessageDisplayed = pushNotificationPage.alertMessageIsDisplayed();
-		assertTrue(isAlertMessageDisplayed, "Submission failed");
+		assertTrue(isAlertMessageDisplayed, "Unable to submit the Push Notification");
 	}
 
 }

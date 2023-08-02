@@ -25,6 +25,6 @@ public class ManageCategoryTest extends Base
 		manageCategoryPage.clickOnNewButton().enterValueInCategoryField().clickOnSelectGroup().uploadFile().clickOnNoRadioButtonOfShowOnTopMenuField()
 		      .clickOnNoRadioButtonOfShowOnLeftMenuField().clickOnSaveButton();
 		boolean isAlertMessageDisplayed = manageCategoryPage.successalertMessageDisplay();
-		assertTrue(isAlertMessageDisplayed, "Unable to submit manage category");
+		assertTrue(isAlertMessageDisplayed, "User unable to submit the Manage Category");
 	}
 }

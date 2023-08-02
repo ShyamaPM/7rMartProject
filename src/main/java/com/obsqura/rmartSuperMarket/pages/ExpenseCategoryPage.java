@@ -20,7 +20,7 @@ public class ExpenseCategoryPage
 	
 	@FindAll(@FindBy (xpath = "//table[contains(@class,'table-bordered')]//tr")) private List<WebElement> titleNames;
 	@FindAll(@FindBy (xpath = "//i[contains(@class,'fa-trash-alt')]")) private List<WebElement> deleteIcon;
-	@FindBy(xpath = "(//a[contains(@class,'btn-danger')])[2]") private WebElement delete;
+	@FindBy(xpath = "//a[contains(@href,'1663&page_ad') and contains(@class,'btn-danger')]") private WebElement delete;
 	@FindBy(xpath = "//div[contains(@class,'alert-dismissible')]") private WebElement alertMessage;
 	@FindBy(xpath = "(//a[contains(@href,'1661&page_ad=1') and contains(@class,'btn-primary')])") private WebElement edit;
 	@FindBy(xpath = "//input[@id='name']") private WebElement titleTextBox;
@@ -31,7 +31,7 @@ public class ExpenseCategoryPage
 		for(WebElement title : titleNames)
 		{
 			String getTitleText = title.getText();
-			if(getTitleText.contains("mysample0.4"))
+			if(getTitleText.contains("Purpose"))
 			{
 				delete.click();
 				PageUtility pageUtility = new PageUtility();

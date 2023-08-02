@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results retried="2" ignored="2" total="6" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-01T08:31:25 IST" name="Grouping" finished-at="2023-08-01T08:32:13 IST" duration-ms="47315">
+  <suite started-at="2023-08-02T13:24:34 IST" name="Parallel method testing" finished-at="2023-08-02T13:25:23 IST" duration-ms="48927">
     <groups>
       <group name="regression">
-        <method signature="LoginTest.verifyTheUserAbleToLoginWithValidCredentials()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.LoginTest@3549bca9]" name="verifyTheUserAbleToLoginWithValidCredentials" class="com.obsqura.rmartSuperMarket.testscript.LoginTest"/>
-        <method signature="LoginTest.verifyTheUserCannotLoginWithInvalidUserNameandValidPassword()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.LoginTest@3549bca9]" name="verifyTheUserCannotLoginWithInvalidUserNameandValidPassword" class="com.obsqura.rmartSuperMarket.testscript.LoginTest"/>
+        <method signature="MobileSliderTest.checkWhetherTheUserAbletoSubmitTheMobileSlider()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.MobileSliderTest@294a6b8e]" name="checkWhetherTheUserAbletoSubmitTheMobileSlider" class="com.obsqura.rmartSuperMarket.testscript.MobileSliderTest"/>
       </group> <!-- regression -->
-      <group name="smoke">
-        <method signature="LoginTest.verifyTheUserCannotLoginWithInvalidUserNameandValidPassword()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.LoginTest@3549bca9]" name="verifyTheUserCannotLoginWithInvalidUserNameandValidPassword" class="com.obsqura.rmartSuperMarket.testscript.LoginTest"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2023-08-01T08:31:25 IST" name="Test" finished-at="2023-08-01T08:32:13 IST" duration-ms="47315">
-      <class name="com.obsqura.rmartSuperMarket.testscript.LoginTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.LoginTest@3549bca9]" started-at="2023-08-01T08:31:26 IST" name="initializeBrowser" finished-at="2023-08-01T08:31:44 IST" duration-ms="18162" status="PASS">
+    <test started-at="2023-08-02T13:24:34 IST" name="Test" finished-at="2023-08-02T13:25:23 IST" duration-ms="48927">
+      <class name="com.obsqura.rmartSuperMarket.testscript.MobileSliderTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.MobileSliderTest@294a6b8e]" started-at="2023-08-02T13:24:34 IST" name="initializeBrowser" finished-at="2023-08-02T13:24:57 IST" duration-ms="22465" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,22 +21,59 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyTheUserAbleToLoginWithValidCredentials()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.LoginTest@3549bca9]" started-at="2023-08-01T08:31:44 IST" name="verifyTheUserAbleToLoginWithValidCredentials" description="Verify whether user is able to login using valid username and password" finished-at="2023-08-01T08:31:50 IST" duration-ms="5884" status="PASS">
+        <test-method retried="true" signature="checkWhetherTheUserAbletoSubmitTheMobileSlider()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.MobileSliderTest@294a6b8e]" started-at="2023-08-02T13:24:57 IST" name="checkWhetherTheUserAbletoSubmitTheMobileSlider" description="Verify whether user able to submit the Mobile slider page after filling all the values" finished-at="2023-08-02T13:24:57 IST" duration-ms="442" status="SKIP">
+          <exception class="org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException">
+            <message>
+              <![CDATA[No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
+at utilities.ExcelUtility.getString(ExcelUtility.java:120)
+at com.obsqura.rmartSuperMarket.testscript.MobileSliderTest.checkWhetherTheUserAbletoSubmitTheMobileSlider(MobileSliderTest.java:16)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0X66172311
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
+... 23 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheUserAbleToLoginWithValidCredentials -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.LoginTest@3549bca9]" started-at="2023-08-01T08:31:50 IST" name="browserQuit" finished-at="2023-08-01T08:31:54 IST" duration-ms="3844" status="PASS">
+        </test-method> <!-- checkWhetherTheUserAbletoSubmitTheMobileSlider -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.MobileSliderTest@294a6b8e]" started-at="2023-08-02T13:24:57 IST" name="browserQuit" finished-at="2023-08-02T13:24:58 IST" duration-ms="912" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyTheUserAbleToLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyTheUserAbleToLoginWithValidCredentials()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.LoginTest@3549bca9] output={null}]]]>
+                <![CDATA[[TestResult name=checkWhetherTheUserAbletoSubmitTheMobileSlider status=SKIP method=MobileSliderTest.checkWhetherTheUserAbletoSubmitTheMobileSlider()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.MobileSliderTest@294a6b8e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.LoginTest@3549bca9]" started-at="2023-08-01T08:31:54 IST" name="initializeBrowser" finished-at="2023-08-01T08:32:07 IST" duration-ms="12772" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.MobileSliderTest@294a6b8e]" started-at="2023-08-02T13:24:58 IST" name="initializeBrowser" finished-at="2023-08-02T13:25:11 IST" duration-ms="12551" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,22 +84,99 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyTheUserCannotLoginWithInvalidUserNameandValidPassword()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.LoginTest@3549bca9]" started-at="2023-08-01T08:32:07 IST" name="verifyTheUserCannotLoginWithInvalidUserNameandValidPassword" description="Verify whether user shoul not be able to login using invalid username and valid password" finished-at="2023-08-01T08:32:09 IST" duration-ms="2810" status="PASS">
+        <test-method signature="checkWhetherTheUserAbletoSubmitTheMobileSlider()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.MobileSliderTest@294a6b8e]" started-at="2023-08-02T13:25:11 IST" name="checkWhetherTheUserAbletoSubmitTheMobileSlider" description="Verify whether user able to submit the Mobile slider page after filling all the values" finished-at="2023-08-02T13:25:22 IST" duration-ms="10999" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheUserCannotLoginWithInvalidUserNameandValidPassword -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.LoginTest@3549bca9]" started-at="2023-08-01T08:32:09 IST" name="browserQuit" finished-at="2023-08-01T08:32:13 IST" duration-ms="3425" status="PASS">
+        </test-method> <!-- checkWhetherTheUserAbletoSubmitTheMobileSlider -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.MobileSliderTest@294a6b8e]" started-at="2023-08-02T13:25:22 IST" name="browserQuit" finished-at="2023-08-02T13:25:23 IST" duration-ms="1252" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyTheUserCannotLoginWithInvalidUserNameandValidPassword status=SUCCESS method=LoginTest.verifyTheUserCannotLoginWithInvalidUserNameandValidPassword()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.LoginTest@3549bca9] output={null}]]]>
+                <![CDATA[[TestResult name=checkWhetherTheUserAbletoSubmitTheMobileSlider status=SUCCESS method=MobileSliderTest.checkWhetherTheUserAbletoSubmitTheMobileSlider()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.MobileSliderTest@294a6b8e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- com.obsqura.rmartSuperMarket.testscript.LoginTest -->
+      </class> <!-- com.obsqura.rmartSuperMarket.testscript.MobileSliderTest -->
+      <class name="com.obsqura.rmartSuperMarket.testscript.PushNotificationTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@7e3181aa]" started-at="2023-08-02T13:24:34 IST" name="initializeBrowser" finished-at="2023-08-02T13:24:57 IST" duration-ms="22601" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method retried="true" signature="verifyWhetherUserAbleToSendTheNotification()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@7e3181aa]" started-at="2023-08-02T13:24:57 IST" name="verifyWhetherUserAbleToSendTheNotification" description="Verify whether user able to send notification via Push Notification" finished-at="2023-08-02T13:24:57 IST" duration-ms="459" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at utilities.ExcelUtility.getString(ExcelUtility.java:126)
+at com.obsqura.rmartSuperMarket.testscript.PushNotificationTest.verifyWhetherUserAbleToSendTheNotification(PushNotificationTest.java:16)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherUserAbleToSendTheNotification -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@7e3181aa]" started-at="2023-08-02T13:24:57 IST" name="browserQuit" finished-at="2023-08-02T13:24:59 IST" duration-ms="1151" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherUserAbleToSendTheNotification status=SKIP method=PushNotificationTest.verifyWhetherUserAbleToSendTheNotification()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@7e3181aa] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@7e3181aa]" started-at="2023-08-02T13:24:59 IST" name="initializeBrowser" finished-at="2023-08-02T13:25:11 IST" duration-ms="11918" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyWhetherUserAbleToSendTheNotification()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@7e3181aa]" started-at="2023-08-02T13:25:11 IST" name="verifyWhetherUserAbleToSendTheNotification" description="Verify whether user able to send notification via Push Notification" finished-at="2023-08-02T13:25:21 IST" duration-ms="10648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherUserAbleToSendTheNotification -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@7e3181aa]" started-at="2023-08-02T13:25:21 IST" name="browserQuit" finished-at="2023-08-02T13:25:23 IST" duration-ms="2020" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherUserAbleToSendTheNotification status=SUCCESS method=PushNotificationTest.verifyWhetherUserAbleToSendTheNotification()[pri:0, instance:com.obsqura.rmartSuperMarket.testscript.PushNotificationTest@7e3181aa] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+      </class> <!-- com.obsqura.rmartSuperMarket.testscript.PushNotificationTest -->
     </test> <!-- Test -->
-  </suite> <!-- Grouping -->
+  </suite> <!-- Parallel method testing -->
 </testng-results>

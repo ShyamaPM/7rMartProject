@@ -11,7 +11,7 @@ import utilities.ExcelUtility;
 public class ExpenseCategoryTest extends Base
 {
 	@Test(retryAnalyzer = Retry.class,description="Verify whether user able to to delete the mentioned title")
-	public void verifyWhetherUserAbleToDeleteTheTitle()
+	public void verifyWhetherUserAbleToDeleteTheTitlefromExpenseCategory()
 	{
 		String userName = ExcelUtility.getString(1, 0,"LoginPage");
 		String password = ExcelUtility.getString(1, 0,"LoginPage");
@@ -24,11 +24,11 @@ public class ExpenseCategoryTest extends Base
 		ExpenseCategoryPage expenseCategoryPage = new ExpenseCategoryPage(driver);
 		expenseCategoryPage.deletTheTitle();
 		boolean isAlertMessageDisplayed = expenseCategoryPage.deleteAlertMessageIsDisplayed();
-		assertTrue(isAlertMessageDisplayed, "Unable to delete");
+		assertTrue(isAlertMessageDisplayed, "Unable to delete the title from the Expense Category Page");
 	}
 	
-	@Test(retryAnalyzer = Retry.class,description="Verify whether user is able to edit the Title")
-	public void verifyUserAbleToEditTheTile()
+	@Test(retryAnalyzer = Retry.class,description="Verify whether user is able to edit the Title from Expense Category Page")
+	public void verifyUserAbleToEditTheTileFromExpenseCategory()
 	{
 		String userName = ExcelUtility.getString(1, 0,"LoginPage");
 		String password = ExcelUtility.getString(1, 0,"LoginPage");
@@ -41,7 +41,7 @@ public class ExpenseCategoryTest extends Base
 		ExpenseCategoryPage expenseCategoryPage = new ExpenseCategoryPage(driver);
 		expenseCategoryPage.editTheTitle();
 		boolean isAlertMessageDisplayedForEdit = expenseCategoryPage.editAlertMessageIsDisplayed();
-		assertTrue(isAlertMessageDisplayedForEdit, "Unable to edit");
+		assertTrue(isAlertMessageDisplayedForEdit, "Unable to edit the title in the from the Expense Category Page");
 	}
 	
 

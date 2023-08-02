@@ -24,6 +24,6 @@ public class ManageDeliveryBoyTest extends Base
 		ManageDeliveryBoyPage manageDeliveryBoyPage = new ManageDeliveryBoyPage(driver);
 		manageDeliveryBoyPage.clickOnNewButton().enterName().enterEmailId().enterPhoneNumber().enterAddressField().reenterUserName().reenterPassword().clickOnSaveButton();
 		boolean isAlertMessageDisplayed = manageDeliveryBoyPage.alertMessageIsDisplayed();
-		assertTrue(isAlertMessageDisplayed, "Submission failed");
+		assertTrue(isAlertMessageDisplayed, "Unable to submit Manage Delivery Boy page");
 	}
 }
