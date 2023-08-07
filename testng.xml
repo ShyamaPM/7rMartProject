@@ -9,9 +9,9 @@
 	</listeners>
   <test thread-count="5" name="Test">
      <classes>
-        <class name="com.obsqura.rmartSuperMarket.testscript.LoginTest"> 
+        <class name="com.obsqura.rmartSuperMarket.testscript.ManageSliderTest"> 
            <methods>
-                <include name="verifyTheUserCannotLoginWithInvalidUserNameandInvalidPassword">
+                <include name="verifyWhetherTheUserAbleToSubmitTheManageSliderPagAfterFillingAllTheFieldValues">
 				</include>
 		   </methods>
         </class>

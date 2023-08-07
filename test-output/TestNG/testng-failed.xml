@@ -9,13 +9,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsqura.rmartSuperMarket.testscript.ManageCategoryTest">
+      <class name="com.obsqura.rmartSuperMarket.testscript.LoginTest">
         <methods>
           <include name="browserQuit"/>
-          <include name="verifyWhetherTheUserAbleToAddValuesInManageCategory"/>
+          <include name="verifyTheUserCannotLoginWithInvalidUserNameandInvalidPassword" invocation-numbers="0"/>
           <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- com.obsqura.rmartSuperMarket.testscript.ManageCategoryTest -->
+      </class> <!-- com.obsqura.rmartSuperMarket.testscript.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [TestNG] -->

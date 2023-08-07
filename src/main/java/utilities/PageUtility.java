@@ -164,7 +164,7 @@ public class PageUtility
 		return (driver.switchTo().alert().getText());
 	}
 
-	public boolean getElementTextList(List<WebElement> chkList, String element) 
+	public boolean isElementTextList(List<WebElement> chkList, String element) 
 	{
 		boolean value = true;
 		for (int i = 0; i < chkList.size(); i++) 
@@ -173,7 +173,7 @@ public class PageUtility
 			if (!text.equals(element)) 
 			{
 				value = false;
-
+				break;
 			}
 		}
 		return value;

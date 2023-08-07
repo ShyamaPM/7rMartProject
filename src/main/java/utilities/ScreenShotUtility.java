@@ -21,7 +21,6 @@ public class ScreenShotUtility
 		{
 			f1.mkdirs();
 		}
-
 		String destination = System.getProperty("user.dir") + "//outputScreenShot//" + failedTestCase + timeStamp + ".png";
 		File finalDestination = new File(destination);
 		FileHandler.copy(screenShot, finalDestination);

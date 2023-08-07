@@ -34,10 +34,8 @@ public class ExpenseCategoryTest extends Base
 		String password = ExcelUtility.getString(1, 0,"LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUsernameOnUsernameField(userName).enterPasswrodOnPasswrodField(password).clickOnSignInButton();
-		
 		MenuSelectionPage menuSelectionPage = new MenuSelectionPage(driver);
 		menuSelectionPage.clickOnManageExpense().clickOnExpenseCategorySubMenu();
-		
 		ExpenseCategoryPage expenseCategoryPage = new ExpenseCategoryPage(driver);
 		expenseCategoryPage.editTheTitle();
 		boolean isAlertMessageDisplayedForEdit = expenseCategoryPage.editAlertMessageIsDisplayed();
